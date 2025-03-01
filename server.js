@@ -13,8 +13,8 @@ const cors = require('cors');
 
 app.use(cors({
   origin: [
-    "https://gestor-task-bay.vercel.app",
-    "http://localhost:5173"  // Aquí agregas otro origen (localhost)
+    process.env.WEB_ORIGIN,
+    process.env.WEB_PR
   ],
   credentials: true,
 }));
