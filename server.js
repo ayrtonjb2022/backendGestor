@@ -11,12 +11,14 @@ const PORT = process.env.PORT || 3000;
 
 const cors = require('cors');
 
-app.use(cors(
-  {
-    origin: "https://gestor-task-bay.vercel.app", 
-    credentials: true, 
-  }
-));
+app.use(cors({
+  origin: [
+    "https://gestor-task-bay.vercel.app",
+    "http://localhost:3000"  // Aquí agregas otro origen (localhost)
+  ],
+  credentials: true,
+}));
+
 
 app.use(express.json());
 
