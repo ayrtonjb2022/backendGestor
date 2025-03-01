@@ -26,7 +26,8 @@ app.use('/api', tasks);
 app.use('/api', notificationsRouter);
 app.use('/api/user', userRouter);
 
-app.listen(3000, '0.0.0.0' ,()=> console.log("corriendo el el puerto 3000"));
+
+app.listen(PORT, '0.0.0.0' ,()=> console.log("corriendo el el puerto", PORT));
 
 
 
