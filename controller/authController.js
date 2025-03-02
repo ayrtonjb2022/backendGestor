@@ -57,7 +57,7 @@ const login = async (req, res) => {
         // Buscar usuario
         const foundUser = await findUserByEmail(email);
         if (!foundUser) {
-            return res.status(404).json({ message: "Usuario no encontrado o registrado" });
+            return res.status(404).json({ message: "Usuario o Contraseña incorrecta" });
         }
 
         // Comparar contraseñas
@@ -78,7 +78,7 @@ const login = async (req, res) => {
 
 
     } catch (error) {
-        console.error("Error al intentar logearse:", error);
+        console.error("Error al intentar logearse:");
         return res.status(500).json({ message: "Error interno del servidor" });
     }
 };
